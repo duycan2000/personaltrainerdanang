@@ -494,8 +494,8 @@ section[id] { scroll-margin-top: 80px; }
 }
 
 /* Card micro-interactions: gentle lift + shadow on hover */
-.test-card, .who-card, .how-card, .price-card { transition: transform .2s ease, box-shadow .2s ease; }
-.test-card:hover, .who-card:hover, .how-card:hover, .price-card:hover {
+.who-card, .how-card, .price-card { transition: transform .2s ease, box-shadow .2s ease; }
+.who-card:hover, .how-card:hover, .price-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(0,0,0,.16);
 }
@@ -685,4 +685,12 @@ html { scroll-behavior: smooth; }
   background: rgba(224,67,43,.07); color: var(--red);
   padding: 9px 11px; border-radius: 7px; margin-top: 12px;
   font-size: 12.5px; line-height: 1.45; font-weight: 600;
+}
+
+
+/* Smaller floating icons on phones (~80% of desktop size) */
+@media (max-width: 520px) {
+  .float-stack { right: 14px; bottom: 14px; gap: 10px; }
+  .float-btn { width: 43px; height: 43px; }
+  .float-btn svg { width: 24px; height: 24px; }
 }
